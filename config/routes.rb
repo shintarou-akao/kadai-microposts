@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :favorites, only:[:create, :destroy]
   
-  # get 'likes', to: 'users#likes'
+  get 'users/:id/likes', to: 'users#favorites'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
